@@ -1,0 +1,27 @@
+{
+  "name": "@break_happy/create-dual-vite",
+  "version": "0.1.1",
+  "description": "Create a dual-target Vite React application for web and file-local runtimes.",
+  "type": "module",
+  "bin": {
+    "create-dual-vite": "./bin/create-dual-vite.mjs"
+  },
+  "files": [
+    "bin",
+    "templates",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "dependencies": {
+    "@clack/prompts": "^1.8.1"
+  },
+  "license": "MIT",
+  "scripts": {
+    "check": "node --check bin/create-dual-vite.mjs",
+    "test": "node --test tests/**/*.test.mjs",
+    "pack:check": "npm pack --dry-run"
+  }
+}
