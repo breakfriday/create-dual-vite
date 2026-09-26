@@ -1,6 +1,6 @@
 import { createBrowserHistory, createHashHistory, createRouter, RouterProvider } from "@tanstack/react-router";
 import { AppProviders } from "@/app/providers";
-import { isFileLocalRuntime, routerBasepath } from "@/shared/runtime/page-url";
+import { isFileLocalRuntime, routerBasepath } from "@/runtime/pageUrl";
 import { routeTree } from "./routeTree.gen";
 
 const router = createRouter({

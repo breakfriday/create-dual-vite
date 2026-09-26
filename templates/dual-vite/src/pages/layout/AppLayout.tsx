@@ -2,7 +2,7 @@ import { BulbOutlined, CodeOutlined, HomeOutlined, MenuFoldOutlined, MenuUnfoldO
 import { Button, Layout, Menu, Space, Switch, Typography } from "antd";
 import { Link, Outlet, useLocation } from "@tanstack/react-router";
 import { useState } from "react";
-import { useAppStore } from "@/shared/store/app.store";
+import { useThemeStore } from "@/store/useThemeStore";
 import styles from "./AppLayout.module.css";
 
 const menuItems = [
@@ -13,8 +13,8 @@ const menuItems = [
 export function AppLayout() {
   const [collapsed, setCollapsed] = useState(false);
   const location = useLocation();
-  const appTheme = useAppStore((state) => state.theme);
-  const toggleTheme = useAppStore((state) => state.toggleTheme);
+  const appTheme = useThemeStore((state) => state.theme);
+  const toggleTheme = useThemeStore((state) => state.toggleTheme);
 
   return (
     <Layout className={styles.shell}>

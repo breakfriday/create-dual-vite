@@ -1,5 +1,5 @@
 import axios, { type AxiosError, type AxiosRequestConfig } from "axios";
-import { useAuthStore } from "@/shared/store/auth.store";
+import { useAuthStore } from "@/store/useAuthStore";
 
 export interface ApiResponse<T> { success: boolean; message: string; data: T }
 export class ApiClientError extends Error {

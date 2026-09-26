@@ -1,8 +1,8 @@
 import { ApiOutlined, CloudOutlined, DesktopOutlined, RightOutlined } from "@ant-design/icons";
 import { Alert, Card, Col, Divider, Row, Space, Tag, Typography } from "antd";
 import { Link } from "@tanstack/react-router";
-import { API_BASE_URL } from "@/shared/api/http";
-import { isFileLocalRuntime } from "@/shared/runtime/page-url";
+import { API_BASE_URL } from "@/api/apiClient";
+import { isFileLocalRuntime } from "@/runtime/pageUrl";
 import styles from "./Homepage.module.css";
 
 const cards = [
@@ -18,7 +18,7 @@ export function Homepage() {
       <section className={styles.hero}>
         <Tag color="blue">DualVite Application Starter</Tag>
         <Typography.Title level={1}>开箱即用的双目标 React 应用</Typography.Title>
-        <Typography.Paragraph>这里是无业务绑定的默认首页。开始在 <code>src/features</code> 中添加你的领域功能。</Typography.Paragraph>
+        <Typography.Paragraph>这里是无业务绑定的默认首页。页面通过 <code>src/api/services</code> 调用统一请求层。</Typography.Paragraph>
         <Space wrap><Tag color="green">运行模式：{runtime}</Tag><Tag>API：{API_BASE_URL}</Tag></Space>
       </section>
       <Row gutter={[18, 18]}>{cards.map((card) => <Col xs={24} md={8} key={card.title}><Card className={styles.card}><span className={styles.icon}>{card.icon}</span><Typography.Title level={4}>{card.title}</Typography.Title><Typography.Paragraph type="secondary">{card.description}</Typography.Paragraph></Card></Col>)}</Row>
