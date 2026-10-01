@@ -1,6 +1,6 @@
 {
   "name": "@break_happy/create-dual-vite",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Create a dual-target Vite React application for web and file-local runtimes.",
   "type": "module",
   "bin": {
