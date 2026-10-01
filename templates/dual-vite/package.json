@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "engines": { "node": ">=20.19.0" },
+  "engines": { "node": "^20.19.0 || >=22.12.0" },
   "scripts": {
     "dev": "vite --mode web",
     "build": "vite build --mode web",
@@ -31,7 +31,7 @@
     "@types/node": "^22.19.7",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^5.1.1",
+    "@vitejs/plugin-react": "^6.1.1",
     "eslint": "^10.0.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-react-hooks": "^7.0.1",
@@ -40,6 +40,6 @@
     "prettier": "^3.7.4",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.48.1",
-    "vite": "^7.2.6"
+    "vite": "^8.3.1"
   }
 }

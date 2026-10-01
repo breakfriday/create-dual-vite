@@ -13,7 +13,12 @@ export default defineConfig(({ mode }) => {
   const isFileLocalBuild = mode === "filelocal";
   return {
     base: isFileLocalBuild ? "./" : normalizeBase(env.VITE_APP_BASE || "/"),
-    build: { outDir: isFileLocalBuild ? "dist-filelocal" : "dist" },
+    // Vite 8 uses Rolldown for dependency optimization and production bundling.
+    // Oxc handles TS/JSX transforms; plugin-react 6 uses Oxc for React Refresh.
+    build: {
+      outDir: isFileLocalBuild ? "dist-filelocal" : "dist",
+      minify: "oxc",
+    },
     plugins: [tanstackRouter(), react()],
     resolve: { alias: { "@": path.resolve(import.meta.dirname, "src") } },
   };
